@@ -20,3 +20,8 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = [
+    path('', lambda request: HttpResponse("Bienvenido al backend de MultiSanabria ✔️")),
+    path('admin/', admin.site.urls),
+    ...
+]
